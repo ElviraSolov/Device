@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Device</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <!-- Шапка -->
-    <header class="page-header">
+    <header class="page-header wrapper">
       <a href="#" class="logo">
-        <img src="#" alt="Device logo" class="header-logo" width="145" height="36">
+        <img src="images/header-logo.svg" alt="Device logo" class="header-logo" width="145" height="36">
       </a>
       <nav class="navigation">
         <form class="search-form" method="get" action="#">
@@ -29,7 +32,7 @@
         </ul>
         <ul class="navigation-site">
           <li class="navigation-site-item">
-            <a href="#" class="navigation-site-link">Каталог товаров</a>
+            <button href="#" class="navigation-site-button button">Каталог товаров</button>
           </li>
           <li class="navigation-site-item">
             <a href="#" class="navigation-site-link">Доставка</a>
@@ -44,20 +47,20 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="main-index main-container">
       <!-- Главный заголовок -->
       <h1 class="visually-hidden">Магазин электроники и аксессуаров "Device"</h1>
 
       <!-- Промо-блок -->
-      <section class="promo">
+      <section class="promo wrapper">
         <div class="promo-slider">
           <button class="visually-hidden">Назад</button>
-          <img class="promo-image" src="#" alt="Квадракоптер" width="560" height="560">
+          <img class="promo-image" src="images/slider/slider-1.png" alt="Квадракоптер" width="560" height="560">
           <button class="visually-hidden">Вперед</button>
         </div>
         <div class="promo-title title">Порхает как бабочка, жалит как пчела!</div>
         <p class="promo-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        <a href="#" class="learn-more-button">Подробнее</a>
+        <a href="#" class="learn-more-button button">Подробнее</a>
         <dl class="promo-features">
           <dt class="promo-features-term">800 м</dt>
           <dd class="promo-features-description">Дальность полета</dd>
@@ -67,7 +70,7 @@
       </section>
 
       <!-- Товары -->
-      <section class="products">
+      <section class="products wrapper">
         <h2 class="visually-hidden">Список товаров по категориям</h2>
         <ul class="products-list">
           <li class="products-list-item">
@@ -111,20 +114,22 @@
 
       <!-- Доставка, гарантия и кредит -->
       <section class="delivery">
-        <div class="delivery-tabs">
-          <div class="delivery-tabs-buttons">
-            <button class="delivery-tabs-button">Доставка</button>
-            <button class="delivery-tabs-button">Гарантия</button>
-            <button class="delivery-tabs-button">Кредит</button>
+        <div class="wrapper">
+          <div class="delivery-tabs">
+            <div class="delivery-tabs-buttons">
+              <button class="delivery-tabs-button button">Доставка</button>
+              <button class="delivery-tabs-button button">Гарантия</button>
+              <button class="delivery-tabs-button button">Кредит</button>
+            </div>
+            <h2 class="delivery-title title">Доставка</h2>
+            <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
-          <h2 class="delivery-title title">Доставка</h2>
-          <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <a href="#" class="delivery-button button">Доставим редкий товар под заказ</a>
         </div>
-        <a href="#" class="delivery-button">Доставим редкий товар под заказ</a>
       </section>
 
       <!-- О нас -->
-      <div class="index-columns">
+      <div class="index-columns wrapper">
         <section class="about-us">
           <h2 class="about-us-title title">О нас</h2>
           <p class="about-us-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -134,7 +139,7 @@
             <li class="types-of-delivery-item">СДИК</li>
             <li class="types-of-delivery-item">ТоксБерри</li>
           </ul>
-          <a href="#" class="about-us-button">Подробнее о нас</a>
+          <a href="#" class="about-us-button button">Подробнее о нас</a>
         </section>
 
         <!-- Контакты -->
@@ -151,65 +156,69 @@
             <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <a href="#" class="contacts-button">Напишите нам</a>
+          <a href="#" class="contacts-button button">Напишите нам</a>
         </section>
       </div>
 
       <!-- Рассылка -->
       <section class="newsletter">
-        <h2 class="newsletter-title title">Подпишитесьна рассылку</h2>
-        <p class="newsletter-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-        <form class="newsletter-form" method="get" action="#">
-          <label class="visually-hidden" for="newsletter-field">E-mail</label>
-          <input class="newsletter-field" id="newsletter-field" type="text" placeholder="Ваш e-mail">
-          <button class="newsletter-button" type="submit">Подписаться</button>
-        </form>
-        <span class="its-free">Это бесплатно</span>
+        <div class="wrapper">
+          <h2 class="newsletter-title title">Подпишитесь на рассылку</h2>
+          <p class="newsletter-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <form class="newsletter-form" method="get" action="#">
+            <label class="visually-hidden" for="newsletter-field">E-mail</label>
+            <input class="newsletter-field" id="newsletter-field" type="text" placeholder="Ваш e-mail">
+            <button class="newsletter-button button" type="submit">Подписаться</button>
+          </form>
+          <span class="its-free">Это бесплатно</span>
+        </div>
       </section>
     </main>
 
     <!-- Подвал -->
     <footer class="page-footer">
-      <a href="#" class="logo">
-        <img src="#" alt="Device logo" class="footer-logo" width="145" height="36">
-      </a>
-      <address class="footer-address">
-        <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-      </address>
-      <ul class="footer-navigation">
-        <li class="footer-navigation-item">
-          <a href="#" class="footer-navigation-link">Доставка</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a href="#" class="footer-navigation-link">Гарантия</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a href="#" class="footer-navigation-link">Контакты</a>
-        </li>
-      </ul>
-      <ul class="footer-social">
-        <li class="footer-social-item">
-          <a href="#" class="footer-social-button">
-            <span class="visually-hidden">Telegram</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a href="#" class="footer-social-button">
-            <span class="visually-hidden">YouTube</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a href="#" class="footer-social-button">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-      </ul>
-      <address class="footer-address">
-        <a class="footer-address-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-      </address>
-      <a class="footer-copyright" href="#">
-        <span class="visually-hidden">Сделано в HTML Academy</span>
-      </a>
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="images/footer-logo.svg" alt="Device logo" class="footer-logo" width="145" height="36">
+        </a>
+        <address class="footer-address">
+          <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        </address>
+        <ul class="footer-navigation">
+          <li class="footer-navigation-item">
+            <a href="#" class="footer-navigation-link">Доставка</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="#" class="footer-navigation-link">Гарантия</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="#" class="footer-navigation-link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer-social">
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-button">
+              <span class="visually-hidden">Telegram</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-button">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-button">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
+        <address class="footer-address">
+          <a class="footer-address-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        </address>
+        <a class="footer-copyright" href="#">
+          <span class="visually-hidden">Сделано в HTML Academy</span>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

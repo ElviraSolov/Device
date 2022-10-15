@@ -1,0 +1,256 @@
+/* Обнуляющие стили */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class] {
+  padding: 0;
+  list-style-type: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul[class],
+li,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button[class] {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Visually hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Страницы */
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.title {
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #000000;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+/* Кнопки */
+.button,
+.navigation-site-link,
+.footer-navigation-link,
+.pagination-back,
+.pagination-forward {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  line-height: 21px;
+  letter-spacing: 2px;
+}
+
+.navigation-user-link-exit {
+  opacity: 0.3;
+}
+
+/* Шапка */
+.page-header {
+  background-color: #ffe17f;
+}
+
+.search-form {
+  font-size: 16px;
+}
+
+.navigation-user-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Промо-блок */
+.promo-features-term {
+  color: #000000;
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.promo-features-description {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* Товары */
+.products-list-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Доставка, гарантия и кредит */
+.delivery {
+  background-color: #f0f0f0;
+}
+
+/* О нас */
+.types-of-delivery-item {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+  list-style: inside;
+}
+
+.types-of-delivery-item::marker {
+  color: #ffc700;
+}
+
+/* Контакты */
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: inherit;
+}
+
+/* Рассылка */
+.newsletter {
+  background-color: #f0f0f0;
+}
+
+/* Каталог */
+.catalog {
+  background-color: #f0f0f0;
+}
+
+.catalog-subtitle {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+}
+
+/* Хлебные крошки */
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Фильтрация */
+.catalog-filter-title {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+}
+
+.control {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+/* Список товаров */
+.products-container {
+  background-color: #ffffff;
+}
+
+.product-card-link {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Пагинация */
+.pagination-link {
+  color: #000000;
+  opacity: 0.3;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.pagination-current {
+  opacity: 0.6;
+}
+
+.pagination-back,
+.pagination-forward {
+  font-size: 18px;
+}
+
+.pagination-forward {
+  opacity: 1;
+}
+
+/* Подвал */
+.page-footer {
+  background-color: #444444;
+}
+
+.footer-navigation-link {
+  color: #ffffff;
+}
+
+.footer-address-text {
+  color: #ffffff;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.footer-address-phone {
+  color: #ffffff;
+  font-style: normal;
+}
