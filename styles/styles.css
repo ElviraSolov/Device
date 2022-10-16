@@ -107,8 +107,19 @@ body {
   background-color: #ffe17f;
 }
 
+.navigation {
+  display: grid;
+  grid-template-areas: "search user-navigation"
+    "site-navigation site-navigation";
+}
+
 .search-form {
+  grid-area: search;
   font-size: 16px;
+}
+
+.navigation-user {
+  grid-area: user-navigation;
 }
 
 .navigation-user-link {
@@ -116,7 +127,15 @@ body {
   text-decoration: none;
 }
 
+.navigation-site {
+  grid-area: site-navigation;
+}
+
 /* Промо-блок */
+.promo {
+  display: flex;
+}
+
 .promo-features-term {
   color: #000000;
   font-size: 36px;
@@ -129,6 +148,12 @@ body {
 }
 
 /* Товары */
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 40px;
+}
+
 .products-list-link {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -137,12 +162,49 @@ body {
   text-decoration: none;
 }
 
+.products-list-image {
+  width: 160px;
+  height: 160px;
+  background-color: #ffe17f;
+}
+
+.products-list-name {
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 160px;
+}
+
 /* Доставка, гарантия и кредит */
 .delivery {
   background-color: #f0f0f0;
 }
 
+.delivery-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 40px;
+}
+
+.delivery-tabs-buttons {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 3;
+}
+
+.tab-description {
+  grid-column: 3 / -1;
+}
+
+.delivery-button {
+  display: block;
+  text-align: center;
+}
+
 /* О нас */
+.index-columns {
+  display: flex;
+}
+
 .types-of-delivery-item {
   font-weight: 700;
   line-height: 20px;
@@ -166,6 +228,34 @@ body {
 /* Рассылка */
 .newsletter {
   background-color: #f0f0f0;
+}
+
+.newsletter .wrapper {
+  display: grid;
+  grid-template-areas: "title title description description"
+    "form form form its-free";
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 145px;
+  grid-column-gap: 40px;
+}
+
+.newsletter-title {
+  grid-area: title;
+  max-width: 350px;
+  margin-right: auto;
+}
+
+.newsletter-description {
+  grid-area: description;
+  max-width: 527px;
+}
+
+.newsletter-form {
+ grid-area: form;
+}
+
+.its-free {
+  grid-area: its-free;
 }
 
 /* Каталог */
@@ -202,7 +292,7 @@ body {
 }
 
 /* Список товаров */
-.products-container {
+.catalog-products-container {
   background-color: #ffffff;
 }
 
@@ -240,8 +330,19 @@ body {
   background-color: #444444;
 }
 
-.footer-navigation-link {
-  color: #ffffff;
+.page-footer .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 80px;
+}
+
+.logo {
+  grid-area: 1 / 1 / 2 / -1;
+}
+
+.footer-address {
+  grid-area: 2 / 1 / -1 / 2;
 }
 
 .footer-address-text {
@@ -250,7 +351,25 @@ body {
   font-size: 16px;
 }
 
-.footer-address-phone {
+.footer-navigation {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-navigation-link {
+  color: #ffffff;
+}
+
+.footer-social {
+  grid-area: 3 / 2 / 4 / 2;
+}
+
+.footer-phone-text {
   color: #ffffff;
   font-style: normal;
+}
+
+.footer-social {
+  grid-area: 3 / 3 / -1 / -1;
 }
