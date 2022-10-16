@@ -271,6 +271,7 @@ body {
 .delivery {
   background-color: #f0f0f0;
   padding-bottom: 145px;
+  margin-bottom: 70px;
 }
 
 .delivery-tabs {
@@ -316,13 +317,60 @@ body {
 }
 
 .delivery-button {
-  display: block;
+  display: grid;
+  position: relative;
   text-align: center;
+  background-color: #f0f0f0;
+  padding: 40px;
+  margin-bottom: 117px;
 }
 
-/* О нас */
+.delivery-button::before {
+  position: absolute;
+  content: "D";
+  min-width: 125px;
+  padding: 40px;
+  background-color: #ffe17f;
+}
+
+.delivery-button::after {
+  position: absolute;
+  right: 0;
+  content: "i";
+  min-width: 125px;
+  padding: 40px;
+}
+
+/* Колонки "О нас" и "Контакты" */
 .index-columns {
   display: flex;
+  padding-bottom: 80px;
+}
+
+.index-column {
+  max-width: 515px;
+  margin-right: 110px;
+}
+
+.index-column:last-child {
+  margin-right: 0;
+}
+
+.columns-title {
+  margin-bottom: 48px;
+}
+
+.columns-subtitle {
+  margin-bottom: 15px;
+}
+
+.columns-text,
+.contacts-address {
+  margin-bottom: 30px;
+}
+
+.types-of-delivery {
+  margin-bottom: 40px !important;
 }
 
 .types-of-delivery-item {
@@ -330,13 +378,21 @@ body {
   line-height: 20px;
   color: #000000;
   list-style: inside;
+  margin-bottom: 18px;
+}
+
+.types-of-delivery-item:last-child {
+  margin-bottom: 0;
 }
 
 .types-of-delivery-item::marker {
   color: #ffc700;
 }
 
-/* Контакты */
+.contacts-schedule-list {
+  margin-bottom: 40px !important;
+}
+
 .contacts-address {
   font-style: normal;
 }
@@ -348,6 +404,8 @@ body {
 /* Рассылка */
 .newsletter {
   background-color: #f0f0f0;
+  padding-top: 64px;
+  padding-bottom: 56px;
 }
 
 .newsletter .wrapper {
@@ -376,6 +434,7 @@ body {
 
 .its-free {
   grid-area: its-free;
+  text-align: end;
 }
 
 /* Каталог */
@@ -480,6 +539,8 @@ body {
 /* Подвал */
 .page-footer {
   background-color: #444444;
+  padding-top: 62px;
+  padding-bottom: 65px;
 }
 
 .page-footer .wrapper {
@@ -487,6 +548,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, auto);
   grid-column-gap: 80px;
+  grid-row-gap: 62px;
 }
 
 .logo {
@@ -524,6 +586,7 @@ body {
   line-height: 20px;
 }
 
-.footer-social {
+.footer-copyright {
   grid-area: 3 / 3 / -1 / -1;
 }
+
