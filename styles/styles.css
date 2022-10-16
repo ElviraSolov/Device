@@ -64,6 +64,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
+  padding-top: 40px;
 }
 
 .wrapper {
@@ -104,13 +105,22 @@ body {
 
 /* Шапка */
 .page-header {
+  position: relative;
   background-color: #ffe17f;
+  padding: 45px 60px 35px;
+}
+
+.header-logo {
+  position: absolute;
+  top: -20px;
 }
 
 .navigation {
   display: grid;
   grid-template-areas: "search user-navigation"
-    "site-navigation site-navigation";
+    "catalog site-navigation";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 45px 40px;
 }
 
 .search-form {
@@ -120,6 +130,18 @@ body {
 
 .navigation-user {
   grid-area: user-navigation;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navigation-user-item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.navigation-user-item:first-child {
+  margin-right: auto;
+  margin-left: 25px;
 }
 
 .navigation-user-link {
@@ -129,20 +151,77 @@ body {
 
 .navigation-site {
   grid-area: site-navigation;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25px !important;
+  justify-content: space-between;
+}
+
+.navigation-catalog-button {
+  grid-area: catalog;
+  text-align: start;
 }
 
 /* Промо-блок */
 .promo {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-areas: "number number"
+    "photo description";
+  grid-column-gap: 40px;
+}
+
+.promo::before {
+  content: "01";
+  grid-area: number;
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: right;
+  color: #ffffff;
+  background-color: #ffe17f;
+  padding-right: 50px;
+}
+
+.promo-slider {
+  grid-area: photo;
+  margin-top: -150px;
+}
+
+.promo-slider-description {
+  margin-top: -30px;
+}
+
+.promo-title {
+  margin-bottom: 30px;
+}
+
+.promo-description {
+  margin-bottom: 60px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.promo-features {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "term term term term"
+    "descr descr descr descr";
 }
 
 .promo-features-term {
+  grid-area: term;
   color: #000000;
   font-size: 36px;
   line-height: 30px;
 }
 
 .promo-features-description {
+  grid-area: descr;
   font-size: 16px;
   line-height: 30px;
 }
@@ -334,7 +413,6 @@ body {
 /* Пагинация */
 .pagination {
   display: flex;
-  
 }
 
 .pagination-link {
