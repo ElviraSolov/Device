@@ -99,16 +99,19 @@ main {
   cursor: pointer;
 }
 
-a:focus {
+a:focus,
+button:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
-a:focus:not(:focus-visible) {
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
   outline: none;
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -277,8 +280,7 @@ a:focus-visible {
   position: relative;
   display: grid;
   grid-template-areas: "number number"
-    "photo description"
-    "pagination pagination";
+    "photo description";
   grid-column-gap: 40px;
   margin-bottom: 70px;
 }
@@ -296,12 +298,44 @@ a:focus-visible {
 }
 
 .promo-slider {
+  position: relative;
   grid-area: photo;
   margin-top: -150px;
 }
 
+.promo-image {
+  object-fit: contain;
+}
+
 .promo-slider-description {
   margin-top: -30px;
+}
+
+.slider-button {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  width: 20px;
+  height: 60px;
+  padding: 0;
+}
+
+.slider-next {
+  transform: rotate(180deg);
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.slider-button:disabled {
+  opacity: 0.2;
 }
 
 .promo-title {
@@ -326,6 +360,7 @@ a:focus-visible {
   color: #000000;
   font-size: 36px;
   line-height: 30px;
+  margin-bottom: 12px;
 }
 
 .promo-features-description {
@@ -335,9 +370,39 @@ a:focus-visible {
 }
 
 .slider-pagination {
-  grid-area: pagination;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+}
+
+.slider-pagination-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid #000000 !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-pagination-current {
+  background-color: #000000;
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
 }
 
 /* Товары */
