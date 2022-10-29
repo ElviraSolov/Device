@@ -95,7 +95,7 @@ main {
   text-decoration: none;
   color: #000000;
   line-height: 21px;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
   cursor: pointer;
 }
 
@@ -181,10 +181,11 @@ button:focus-visible {
 
 .navigation {
   display: grid;
+  align-items: baseline;
   grid-template-areas: "search user-navigation"
     "catalog site-navigation";
   grid-template-columns: 1fr 1fr;
-  grid-gap: 45px 40px;
+  grid-gap: 30px 40px;
 }
 
 .search-form {
@@ -255,24 +256,89 @@ button:focus-visible {
   z-index: 2;
 }
 
+.popover-catalog-button {
+  position: relative;
+  grid-area: catalog;
+}
+
 .navigation-catalog-button {
   position: relative;
-  width: 236px;
+  width: 293px;
+  height: 50px;
   padding: 0;
-  grid-area: catalog;
   text-align: start;
   background: none;
 }
 
-.navigation-catalog-button::before {
+.catalog-icon {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.3;
+}
+
+.navigation-catalog-button:hover .catalog-icon,
+.navigation-catalog-button:active .catalog-icon{
+  opacity: 1;
+}
+
+/* Поповер каталога */
+.popover-catalog {
   position: absolute;
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../images/header-navigation/catalog.svg");
-  background-repeat: no-repeat;
-  right: -32px;
-  top: -10px;
+  top: 55px;
+  left: -60px;
+  z-index: 2;
+  background-color: #ffe17f;
+  width: 1160px;
+  min-height: 180px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.popover-open {
+  display: block;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.popover-catalog-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 180px;
+  width: 655px;
+  padding-left: 60px !important;
+}
+
+.popover-catalog-item {
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+.popover-catalog-item:last-child {
+  height: 120px;
+}
+
+.popover-catalog-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.popover-catalog-link:hover {
+  opacity: 0.6;
+}
+
+.popover-catalog-link:active {
+  opacity: 0.3;
 }
 
 /* Промо-блок */
