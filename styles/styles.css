@@ -5,18 +5,11 @@
   box-sizing: border-box;
 }
 
-ul[class], ol[class] {
-  padding: 0;
-  list-style-type: none;
-}
-
 body,
 h1,
 h2,
 h3,
 p,
-ul[class],
-ol[class],
 li,
 dl,
 dd {
@@ -28,10 +21,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-button[class] {
-  border: none;
 }
 
 /* Visually hidden */
@@ -97,6 +86,7 @@ main {
   line-height: 21px;
   letter-spacing: 0.2em;
   cursor: pointer;
+  border: none;
 }
 
 a:focus,
@@ -229,6 +219,9 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .navigation-user-item:not(:last-child) {
@@ -248,7 +241,9 @@ button:focus-visible {
   grid-area: site-navigation;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 25px !important;
+  padding: 0 0 0 25px;
+  margin: 0;
+  list-style-type: none;
   justify-content: space-between;
 }
 
@@ -313,7 +308,9 @@ button:focus-visible {
   flex-wrap: wrap;
   height: 180px;
   width: 655px;
-  padding-left: 60px !important;
+  padding: 0 0 0 60px;
+  margin: 0;
+  list-style-type: none;
 }
 
 .popover-catalog-item {
@@ -443,6 +440,9 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .slider-pagination-item:not(:last-child) {
@@ -454,7 +454,7 @@ button:focus-visible {
   height: 12px;
   padding: 0;
   background-color: transparent;
-  border: 2px solid #000000 !important;
+  border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -480,6 +480,9 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 40px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .products-list-link {
@@ -703,7 +706,9 @@ button:focus-visible {
 }
 
 .types-of-delivery {
-  margin-bottom: 40px !important;
+  padding: 0;
+  margin: 0 0 40px 0;
+  list-style-type: none;
 }
 
 .types-of-delivery-item {
@@ -723,7 +728,9 @@ button:focus-visible {
 }
 
 .contacts-schedule-list {
-  margin-bottom: 40px !important;
+  padding: 0;
+  margin: 0 0 40px 0;
+  list-style-type: none;
 }
 
 .contacts-address {
@@ -827,6 +834,9 @@ button:focus-visible {
 
 /* Хлебные крошки */
 .breadcrumbs {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   display: flex;
 }
 
@@ -911,7 +921,9 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 44px 40px;
-  margin-bottom: 44px !important;
+  margin: 0 0 44px 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .product-card {
@@ -963,7 +975,9 @@ button:focus-visible {
   display: flex;
   background-color: #ebebeb;
   align-self: stretch;
-  padding: 15px 25px !important;
+  padding: 15px 25px;
+  margin: 0;
+  list-style-type: none;
   justify-content: center;
 }
 
@@ -1049,6 +1063,9 @@ button:focus-visible {
 }
 
 .footer-site-navigation {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
   justify-content: space-around;
@@ -1059,6 +1076,9 @@ button:focus-visible {
 }
 
 .footer-social {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
   justify-content: center;
