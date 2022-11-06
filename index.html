@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Device</title>
 
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -35,18 +37,47 @@
               Сравнить
             </a>
           </li>
-          <li class="navigation-user-item">
+          <li class="navigation-user-item popover-cart-button">
             <a href="#" class="navigation-user-link navigation-link">
               <span class="navigation-icon-cart">
                 <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/></svg>
               </span>
               Корзина
             </a>
+            <div class="popover-cart popover">
+              <div class="popover-content">
+                <ul class="cart-list">
+                  <li class="cart-list-item">
+                    <a class="cart-list-link" href="#">
+                      <img class="cart-list-image" src="images/catalog/amateur-monopod.png" alt="Любительский монопод." width="39" height="43">
+                      <div class="cart-list-title">Любительская <br>селфи-палка</div>
+                    </a>
+                    <button class="delete-button button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="cart-list-item">
+                    <a class="cart-list-link" href="#">
+                      <img class="cart-list-image" src="images/catalog/profi-monopod.png" alt="Профессиональный монопод." width="39" height="43">
+                      <div class="cart-list-title">Профессиональная селфи-палка</div>
+                    </a>
+                    <button class="delete-button button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="cart-total">
+                  <div class="total-amount">Товаров: <span class="total-amount-number">2</span></div>
+                  <div class="total-sum">Сумма: <span class="total-sum-number">2000</span> ₽</div>
+                </div>
+                <button class="cart-button button">Открыть корзину</button>
+              </div>
+            </div>
           </li>
         </ul>
 
         <div class="popover-catalog-button">
-          <button class="navigation-catalog-button button">
+          <button class="navigation-catalog-button button" type="button">
             Каталог товаров
             <span class="catalog-icon-plus">
               <svg class="catalog-icon" aria-hidden="true" focusable="false" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="24" stroke="#000" stroke-width="2"/><g clip-path="url(#a)"><path d="M33 24h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000"/></g><defs><clipPath id="a"><path transform="translate(17 17)" d="M0 0h16v16H0z"/></clipPath></defs></svg>
@@ -57,22 +88,22 @@
               <h2 class="visually-hidden">Каталог товаров</h2>
               <ul class="popover-catalog-list">
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Виртуальная реальность</a>
+                  <a class="popover-catalog-link" href="#">Виртуальная реальность</a>
                 </li>
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Моноподы для cелфи</a>
+                  <a class="popover-catalog-link" href="catalog.html">Моноподы для cелфи</a>
                 </li>
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Экшн-камеры</a>
+                  <a class="popover-catalog-link" href="#">Экшн-камеры</a>
                 </li>
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Фитнес-браслеты</a>
+                  <a class="popover-catalog-link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Умные часы</a>
+                  <a class="popover-catalog-link" href="#">Умные часы</a>
                 </li>
                 <li class="popover-catalog-item">
-                  <a href="#" class="popover-catalog-link">Квадрокоптеры</a>
+                  <a class="popover-catalog-link" href="#">Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
@@ -196,9 +227,9 @@
         <div class="wrapper">
           <div class="delivery-tabs">
             <div class="delivery-tabs-buttons">
-              <button class="delivery-tabs-button delivery-tabs-button-current button">Доставка</button>
-              <button class="delivery-tabs-button yellow-button button">Гарантия</button>
-              <button class="delivery-tabs-button yellow-button button">Кредит</button>
+              <button class="delivery-tabs-button delivery-tabs-button-current button" type="button">Доставка</button>
+              <button class="delivery-tabs-button yellow-button button" type="button">Гарантия</button>
+              <button class="delivery-tabs-button yellow-button button" type="button">Кредит</button>
             </div>
             <div class="tab-description">
               <h2 class="delivery-title title">Доставка</h2>

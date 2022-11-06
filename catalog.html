@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Device. Каталог</title>
+    <title>Моноподы для селфи</title>
 
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -49,7 +51,7 @@
         </ul>
 
         <div class="popover-catalog-button">
-          <button class="navigation-catalog-button button">
+          <button class="navigation-catalog-button button" type="button">
             Каталог товаров
             <span class="catalog-icon-plus">
               <svg class="catalog-icon" aria-hidden="true" focusable="false" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="24" stroke="#000" stroke-width="2"/><g clip-path="url(#a)"><path d="M33 24h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000"/></g><defs><clipPath id="a"><path transform="translate(17 17)" d="M0 0h16v16H0z"/></clipPath></defs></svg>
@@ -131,7 +133,7 @@
                       </button>
                       <label class="range-label">
                         от
-                        <input class="range-input range-input-min" type="number" value="0" name="min-price">
+                        <input class="range-input range-input-min field" type="number" value="0" name="min-price">
                       </label>
                     </div>
                     <div class="toggle-wrapper max-toggle-wrapper">
@@ -140,7 +142,7 @@
                       </button>
                       <label class="range-label">
                         до
-                        <input class="range-input range-input-max" type="number" value="5000" name="max-price">
+                        <input class="range-input range-input-max field" type="number" value="5000" name="max-price">
                       </label>
                     </div>
                   </div>
@@ -208,7 +210,7 @@
                 </ul>
               </fieldset>
 
-              <a class="catalog-filter-button yellow-button button" type="submit">Показать</a>
+              <a class="catalog-filter-button yellow-button button">Показать</a>
             </form>
           </div>
 
@@ -222,11 +224,17 @@
             </select>
 
             <div class="sorting-buttons">
-              <a href="#" class="sorting-button sorting-button-up">
+              <a class="sorting-button sorting-button-up" href="#">
                 <span class="visually-hidden">По возрастанию</span>
+                <svg class="sorting-button-icon" aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0L11.5 10H0.5"/>
+                </svg>
               </a>
-              <a href="#" class="sorting-button sorting-button-down">
+              <a class="sorting-button sorting-button-down" href="#">
                 <span class="visually-hidden">По убыванию</span>
+                <svg class="sorting-button-icon" aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0L11.5 10H0.5"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -241,14 +249,20 @@
                     <h3 class="product-card-title">Любительская селфи-палка</h3>
                     <span class="product-card-price">500 ₽</span>
                   </div>
+                  <div class="product-card-details">
+                    <button class="details-button yellow-button button" type="button">Подробнее</button>
+                  </div>
                 </a>
               </li>
               <li class="product-card">
-                <a href="#" class="product-card-link">
+                <a href="#" class="product-card-link product-card-link-new">
                   <img class="product-card-image" src="images/catalog/profi-monopod.png" alt="Профессиональная селфи-палка " width="360" height="380">
                   <div class="product-card-description">
                     <h3 class="product-card-title">Профессиональная селфи-палка</h3>
                     <span class="product-card-price">1500 ₽</span>
+                  </div>
+                  <div class="product-card-details">
+                    <button class="details-button yellow-button button" type="button">Подробнее</button>
                   </div>
                 </a>
               </li>
@@ -259,6 +273,9 @@
                     <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
                     <span class="product-card-price">2500 ₽</span>
                   </div>
+                  <div class="product-card-details">
+                    <button class="details-button yellow-button button" type="button">Подробнее</button>
+                  </div>
                 </a>
               </li>
               <li class="product-card">
@@ -268,6 +285,9 @@
                     <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
                     <span class="product-card-price">1500 ₽</span>
                   </div>
+                  <div class="product-card-details">
+                    <button class="details-button yellow-button button" type="button">Подробнее</button>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -275,7 +295,7 @@
             <!-- Пагинация -->
             <ul class="pagination">
               <li class="pagination-item">
-                <a href="#" class="pagination-link pagination-back">Назад</a>
+                <a href="#" class="pagination-button pagination-button-disabled pagination-back">Назад</a>
               </li>
               <li class="pagination-item">
                 <a href="#" class="pagination-link pagination-current">1</a>
@@ -293,7 +313,7 @@
                 <a href="#" class="pagination-link">15</a>
               </li>
               <li class="pagination-item">
-                <a href="#" class="pagination-link pagination-forward">Вперёд</a>
+                <a href="#" class="pagination-button pagination-forward">Вперёд</a>
               </li>
             </ul>
           </div>
