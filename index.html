@@ -343,5 +343,66 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button button" type="button">
+          <svg class="modal-close-icon" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 2.36364L23.6364 0L13 10.6364L2.36364 0L0 2.36364L10.6364 13L0 23.6364L2.36364 26L13 15.3636L23.6364 26L26 23.6364L15.3636 13L26 2.36364Z" fill="black"/>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title title">Доставка под заказ</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="personal-data">
+              <div class="field-wrapper">
+                <label class="modal-delivery-label" for="name">Ваше имя:</label>
+                <div class="input-name-wrapper">
+                  <input class="modal-delivery-field modal-delivery-field-name field" id="name" type="text" placeholder="Введите имя" required>
+                </div>
+              </div>
+
+              <div class="field-wrapper">
+                <label class="modal-delivery-label" for="mail">Ваш e-mail: </label>
+                <div class="input-mail-wrapper">
+                  <input type="email" id="mail" class="modal-delivery-field modal-delivery-field-mail field error-field" placeholder="Введите email" value="почта" required>
+                </div>
+                <p class="error-message">Забавный у вас адрес</p>
+              </div>
+            </div>
+
+            <div class="order-details">
+              <div class="field-wrapper">
+                <label class="modal-delivery-label" for="request">Что нужно привезти:</label>
+                <input type="text" id="request" class="modal-delivery-field modal-delivery-field-request field" placeholder="В свободной форме" required>
+              </div>
+
+              <div class="field-wrapper">
+                <div class="tooltip-wrapper">
+                <label for="amount" class="modal-delivery-label">Количество:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-button" aria-labelledby="tooltip-label-date" type="button">i</button>
+                    <span class="tooltip-text" id="tooltip-label-date" role="tooltip">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                  </span>
+                </div>
+                <div class="amount-input-wrapper">
+                  <button class="amount-button button-minus button" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <input class="modal-delivery-field modal-delivery-field-amount field" type="number" id="amount" value="1" required>
+                  <button class="amount-button button-plus button" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="modal-delivery-button yellow-button button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
