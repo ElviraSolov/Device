@@ -343,7 +343,7 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   width: 293px;
   height: 50px;
-  padding: 0;
+  padding: 0 55px 0 0;
   text-align: start;
   background: none;
 }
@@ -842,7 +842,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: grid;
   position: relative;
   text-align: center;
-  padding: 40px;
+  padding: 40px 125px;
   background-color: #f0f0f0;
   margin-bottom: 117px;
 }
@@ -1101,6 +1101,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .catalog-subtitle {
+  max-width: 300px;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -1361,6 +1362,7 @@ input[type="radio"]:checked + .control-mark::after {
 .select-control {
   background-color: transparent;
   border: none;
+  max-width: 300px;
   padding-right: 32px;
   -webkit-appearance: none;
   appearance: none;
@@ -1488,6 +1490,10 @@ input[type="radio"]:checked + .control-mark::after {
   font-weight: 700;
   line-height: 20px;
   max-width: 250px;
+}
+
+.product-card-price {
+  max-width: 80px;
 }
 
 .product-download-button {
