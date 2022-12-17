@@ -120,6 +120,12 @@ button:focus-visible,
   z-index: 1;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 button:disabled {
   opacity: 0.3;
   cursor: auto;
